@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://kmsoftware.com/index.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://ik.imagekit.io/iq6dnzo5f/logo.png</image:loc>
+            <image:title>KMS Software Solutions Logo</image:title>
+            <image:caption>Best Software Training Institute in Nellore</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Courses Page - High Priority -->
+    <url>
+        <loc>https://kmsoftware.com/courses.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ik.imagekit.io/iq6dnzo5f/logo.png</image:loc>
+            <image:title>27 Software Courses Nellore</image:title>
+            <image:caption>Power BI, Java, Data Science courses in Nellore</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Training Schedule - High Priority (Dynamic Content) -->
+    <url>
+        <loc>https://kmsoftware.com/trainingschedule.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ik.imagekit.io/iq6dnzo5f/logo.png</image:loc>
+            <image:title>Training Schedule 2026 Nellore</image:title>
+            <image:caption>Power BI batches Jan 2026 - KMS Software Solutions</image:caption>
+        </image:image>
+    </url>
+
+    <!-- About Us - Medium Priority -->
+    <url>
+        <loc>https://kmsoftware.com/about.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://ik.imagekit.io/iq6dnzo5f/logo.png</image:loc>
+            <image:title>About KMS Software Solutions</image:title>
+            <image:caption>Nellore's #1 IT training institute - 85% placement</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Contact Us - Medium Priority -->
+    <url>
+        <loc>https://kmsoftware.com/contact.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://ik.imagekit.io/iq6dnzo5f/logo.png</image:loc>
+            <image:title>Contact KMS Software Solutions Nellore</image:title>
+            <image:caption>opp. KVR Petrol Pump, Somasekara Puram, Nellore</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Gallery - Lower Priority -->
+    <url>
+        <loc>https://kmsoftware.com/gallery.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://ik.imagekit.io/iq6dnzo5f/logo.png</image:loc>
+            <image:title>KMS Training Gallery Nellore</image:title>
+            <image:caption>Classroom training photos - KMS Software Solutions</image:caption>
+        </image:image>
+    </url>
+
+</urlset>
