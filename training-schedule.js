@@ -59,21 +59,21 @@ document.addEventListener('DOMContentLoaded', function () {
   { id: 7, course: 'Advanced Java', category: 'programming', batches: [
     { day: 9, time: '7 AM' }, { day: 15, time: '6 PM' }, { day: 24, time: '8 AM' }, { day: 31, time: '7 PM' }
   ]},
-  { id: 8, course: 'Java Full Stack', category: 'development', batches: [
-    { day: 6, time: '7 AM' }, { day: 13, time: '6 PM' }, { day: 20, time: '8 AM' }, { day: 27, time: '7 PM' }
-  ]},
-  { id: 9, course: 'Web Development', category: 'development', batches: [
-    { day: 5, time: '8 AM' }, { day: 14, time: '6 PM' }, { day: 21, time: '7 AM' }, { day: 28, time: '7 PM' }
-  ]},
-  { id: 10, course: 'React JS', category: 'development', batches: [
-    { day: 4, time: '7 AM' }, { day: 12, time: '6 PM' }, { day: 19, time: '8 AM' }, { day: 26, time: '7 PM' }
-  ]},
-  { id: 11, course: 'Angular', category: 'development', batches: [
-    { day: 6, time: '7 AM' }, { day: 15, time: '6 PM' }, { day: 22, time: '8 AM' }, { day: 29, time: '7 PM' }
-  ]},
-  { id: 12, course: 'Node JS', category: 'development', batches: [
-    { day: 7, time: '8 AM' }, { day: 16, time: '6 PM' }, { day: 23, time: '7 AM' }, { day: 30, time: '7 PM' }
-  ]},
+  // { id: 8, course: 'Java Full Stack', category: 'development', batches: [
+  //   { day: 6, time: '7 AM' }, { day: 13, time: '6 PM' }, { day: 20, time: '8 AM' }, { day: 27, time: '7 PM' }
+  // ]},
+  // { id: 9, course: 'Web Development', category: 'development', batches: [
+  //   { day: 5, time: '8 AM' }, { day: 14, time: '6 PM' }, { day: 21, time: '7 AM' }, { day: 28, time: '7 PM' }
+  // ]},
+  // { id: 10, course: 'React JS', category: 'development', batches: [
+  //   { day: 4, time: '7 AM' }, { day: 12, time: '6 PM' }, { day: 19, time: '8 AM' }, { day: 26, time: '7 PM' }
+  // ]},
+  // { id: 11, course: 'Angular', category: 'development', batches: [
+  //   { day: 6, time: '7 AM' }, { day: 15, time: '6 PM' }, { day: 22, time: '8 AM' }, { day: 29, time: '7 PM' }
+  // ]},
+  // { id: 12, course: 'Node JS', category: 'development', batches: [
+  //   { day: 7, time: '8 AM' }, { day: 16, time: '6 PM' }, { day: 23, time: '7 AM' }, { day: 30, time: '7 PM' }
+  // ]},
   { id: 13, course: 'SQL & MySQL', category: 'database', batches: [
     { day: 3, time: '7 AM' }, { day: 11, time: '6 PM' }, { day: 18, time: '8 AM' }, { day: 25, time: '7 PM' }
   ]},
@@ -221,4 +221,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderBatches(batchesData);
 });
+
 
