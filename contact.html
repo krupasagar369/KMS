@@ -366,10 +366,11 @@
                 const encodedMessage = encodeURIComponent(whatsappMessage);
 
                 // WhatsApp URL (with country code - India +91)
-                const whatsappURL = `https://wa.me/917358497022?text=${encodedMessage}`;
+               const whatsappURL = `https://api.whatsapp.com/send?phone=917358497022&text=${encodedMessage}`;
+window.location.href = whatsappURL;
 
                 // Open WhatsApp
-                window.open(whatsappURL, '_blank');
+                window.location.href = whatsappURL;
 
                 // Show success message
                 alert("Redirecting to WhatsApp...");
@@ -390,3 +391,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
