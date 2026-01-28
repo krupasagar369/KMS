@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
     <meta name="keywords" content="software courses Nellore, Power BI course Nellore, Java training Nellore, Data Science course Nellore, IT courses Nellore, Azure training Nellore, Python course Nellore, C++ training, MSBI course Andhra Pradesh">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="27 Software Courses in Nellore | KMS Software Solutions">
+    <meta property="og:title" content="36 Software Courses in Nellore | KMS Software Solutions">
     <meta property="og:description" content="Power BI, Java, Data Science, Azure, Python, C++ courses with 85% placement. Nellore's best IT training institute.">
     <meta property="og:image" content="https://ik.imagekit.io/iq6dnzo5f/logo.png">
     <meta property="og:url" content="https://kmsoftware.com/courses.html">
@@ -23,7 +24,7 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="27 Courses | KMS Software Solutions Nellore">
+    <meta name="twitter:title" content="36 Courses | KMS Software Solutions Nellore">
     <meta name="twitter:description" content="Power BI, Java Development, Data Science, Azure training courses in Nellore">
     <meta name="twitter:image" content="https://ik.imagekit.io/iq6dnzo5f/logo.png">
     
@@ -115,8 +116,8 @@
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "KMS Software Solutions Course Catalog",
-        "description": "Complete list of 27 software training courses offered in Nellore",
-        "numberOfItems": 27,
+        "description": "Complete list of 36 software training courses offered in Nellore",
+        "numberOfItems": 36,
         "itemListElement": [
             {
                 "@type": "ListItem",
@@ -165,8 +166,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-                       <li class="nav-item"><a class="nav-link active" href="internship.html">Internship</a></li>
+                    <li class="nav-item"><a class="nav-link " href="courses.html">Courses</a></li>
+                     <li class="nav-item"><a class="nav-link active " href="internship.html">Internship</a></li>
                     <li class="nav-item"><a class="nav-link" href="trainingschedule.html">Training Schedule</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -176,33 +177,51 @@
             </div>
         </div>
     </nav>
-<!-- Internship Section -->
-<section class="internship-hero mt-5">
-    <h1 class="mt-5">Our <span>Internships</span></h1>
-    <p>Choose from industry-focused internships designed to make you job-ready</p>
-</section>
 
-<div class="internship-filter-wrapper">
-    <div class="internship-filter-row">
-        <div class="internship-search">
-            <input id="internshipSearch" type="text" placeholder="Search for an internship (e.g., Java, AWS)...">
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Our <span class="text-primary">Internships</span></h1>
+            <p class="lead">Choose from industry-focused internships designed to make you job-ready</p>
         </div>
+    </section>
 
-        <select id="internshipCategory">
-            <option value="all">All Categories</option>
-            <option value="software">Software</option>
-            <option value="cloud">Cloud</option>
-            <option value="electronics">Electronics</option>
-        </select>
-    </div>
+    <!-- Filter & Search Section -->
+    <section class="filter-search-section py-4 bg-white">
+        <div class="container">
+            <div class="row g-3 align-items-center">
+                <!-- Search Box -->
+                <div class="col-lg-8 col-md-7">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="courseSearch" class="form-control" placeholder="Search for a course (e.g., Python, Java)...">
+                    </div>
+                </div>
+                
+                <!-- Category Filter -->
+                <div class="col-lg-4 col-md-5">
+                    <select id="categoryFilter" class="form-select category-select">
+                        <option value="all">All Categories</option>
+                        <option value="programming">Programming & Fundamentals</option>
+                        <option value="business-intelligence">Business Intelligence</option>
+                        <option value="azure-cloud">Azure Cloud</option>
+                        <option value="power-platform">Power Platform</option>
+                        <option value="data-science">Data Science & Analytics</option>
+                        <option value="development">Software Development</option>
+                        <option value="soft-skills">Soft Skills</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Results Count -->
+            <div class="results-info mt-3">
+                <p class="text-muted mb-0">Showing <span id="resultsCount">36 </span> courses</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="internship-count">
-        Showing <span id="internshipCount">36</span> internships
-    </div>
-</div>
-
-        <!-- Internship Cards -->
-       <section class="courses-section py-5">
+   <!-- Courses Grid Section -->
+<section class="courses-section py-5">
     <div class="container">
         <div class="row g-4" id="coursesGrid">
             <!-- 1. MS Office -->
@@ -582,8 +601,124 @@
                     </a>
                 </div>
             </div>
+            <!-- 28. PostgreSQL -->
+        <div class="col-lg-4 col-md-6 fade-up" data-category="development">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/database_postgres.png" alt="PostgreSQL">
         </div>
-        
+        <h4>PostgreSQL</h4>
+        <p>Advanced relational database concepts, queries & performance tuning</p>
+        <a href="contact.html?course=PostgreSQL" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+        <!-- 29. Microsoft 365 -->
+    <div class="col-lg-4 col-md-6 fade-up" data-category="soft-skills">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/microsoft-365.jpg" alt="Microsoft 365">
+        </div>
+        <h4>Microsoft 365</h4>
+        <p>Office apps, collaboration tools, OneDrive & Teams</p>
+        <a href="contact.html?course=Microsoft+365" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+            <!-- 30. IoT -->
+            <div class="col-lg-4 col-md-6 fade-up" data-category="development">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/iot%20logo.jpg" alt="IoT">
+        </div>
+        <h4>Internet of Things (IoT)</h4>
+        <p>Smart devices, sensors, microcontrollers & real-time applications</p>
+        <a href="contact.html?course=IoT" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+             <!--31. Embedded Systems -->
+            <div class="col-lg-4 col-md-6 fade-up" data-category="development">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/Embeded_Systems_Badge.png" alt="Embedded Systems">
+        </div>
+        <h4>Embedded Systems</h4>
+        <p>Microcontrollers, C programming & hardware interfacing</p>
+        <a href="contact.html?course=Embedded+Systems" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+            <!--32. DevOps -->
+    <div class="col-lg-4 col-md-6 fade-up" data-category="azure-cloud">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/Picsart_26-01-28_18-23-26-981.png" alt="DevOps">
+        </div>
+        <h4>DevOps</h4>
+        <p>CI/CD, Docker, Kubernetes, Git & automation tools</p>
+        <a href="contact.html?course=DevOps" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+         <!--33. Cyber Security -->
+            <div class="col-lg-4 col-md-6 fade-up" data-category="data-science">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/cyber%20security.avif" alt="Cyber Security">
+        </div>
+        <h4>Cyber Security</h4>
+        <p>Network security, ethical hacking & threat analysis</p>
+        <a href="contact.html?course=Cyber+Security" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+         <!--34. VLSI -->
+            <div class="col-lg-4 col-md-6 fade-up" data-category="development">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/Picsart_26-01-28_18-22-14-352.png" alt="VLSI">
+        </div>
+        <h4>VLSI Design</h4>
+        <p>Chip design, RTL coding & semiconductor fundamentals</p>
+        <a href="contact.html?course=VLSI+Design" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+         <!--35. AWS -->
+            <div class="col-lg-4 col-md-6 fade-up" data-category="azure-cloud">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/Picsart_26-01-28_18-22-53-562.png" alt="AWS">
+        </div>
+        <h4>AWS Cloud</h4>
+        <p>EC2, S3, IAM, cloud architecture & deployment</p>
+        <a href="contact.html?course=AWS+Cloud" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+         <!--36. R Language -->
+            <div class="col-lg-4 col-md-6 fade-up" data-category="data-science">
+    <div class="course-card-modern">
+        <div class="course-logo-container">
+            <img src="https://ik.imagekit.io/tejasraju/R_(programming_language)-Logo.wine.png" alt="R Language">
+        </div>
+        <h4>R Programming</h4>
+        <p>Statistical computing, data visualization & analytics</p>
+        <a href="contact.html?course=R+Programming" class="btn btn-primary w-100 enroll-btn">
+            Enroll Now <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+        </div>
         <!-- No Results Message -->
         <div id="noResults" class="text-center py-5" style="display: none;">
             <i class="bi bi-search" style="font-size: 4rem; color: #ccc;"></i>
@@ -626,15 +761,7 @@
         </div>
     </section>
 
-        <!-- No Results -->
-        <div class="no-results" id="internshipNoResults">
-            No internships found 😕
-        </div>
-
-    </div>
-</section>
-
- <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
@@ -685,58 +812,84 @@
                 <p class="mb-0">&copy; 2026 KMS Software Solutions. All rights reserved.</p>
             </div>
         </div>
-    </footer> 
+    </footer>
 
-
- <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/917358497022" class="whatsapp-float" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-    const searchInput = document.getElementById('internshipSearch');
-    const categoryFilter = document.getElementById('internshipCategory');
-    const cards = document.querySelectorAll('.internship-card');
-    const countText = document.getElementById('internshipCount');
-    const noResults = document.getElementById('internshipNoResults');
-
-    function filterInternships() {
-        const searchValue = searchInput.value.toLowerCase().trim();
-        const categoryValue = categoryFilter.value;
-        let visible = 0;
-
-        cards.forEach(card => {
-            const title = card.querySelector('h4').innerText.toLowerCase();
-            const desc = card.querySelector('p').innerText.toLowerCase();
-            const category = card.getAttribute('data-category');
-
-            const matchesSearch =
-                title.includes(searchValue) || desc.includes(searchValue);
-
-            const matchesCategory =
-                categoryValue === 'all' || category === categoryValue;
-
-            if (matchesSearch && matchesCategory) {
-                card.style.display = '';
-                visible++;
-            } else {
-                card.style.display = 'none';
+    <script>
+        // Course Search and Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('courseSearch');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const coursesGrid = document.getElementById('coursesGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsCount = document.getElementById('resultsCount');
+            
+            // Get all course cards
+            const courseCards = coursesGrid.querySelectorAll('.col-lg-4');
+            
+            // Function to filter and search courses
+            function filterCourses() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCategory = categoryFilter.value;
+                let visibleCount = 0;
+                
+                courseCards.forEach(card => {
+                    const courseTitle = card.querySelector('h4').textContent.toLowerCase();
+                    const courseDesc = card.querySelector('p').textContent.toLowerCase();
+                    const courseCategory = card.getAttribute('data-category');
+                    
+                    // Check if course matches search term
+                    const matchesSearch = courseTitle.includes(searchTerm) || 
+                                         courseDesc.includes(searchTerm);
+                    
+                    // Check if course matches category
+                    const matchesCategory = selectedCategory === 'all' || 
+                                           courseCategory === selectedCategory;
+                    
+                    // Show/hide course card
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = 'block';
+                        card.classList.remove('fade-out');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('fade-out');
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+                
+                // Update results count
+                resultsCount.textContent = visibleCount;
+                
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
             }
+            
+            // Event listeners
+            searchInput.addEventListener('input', filterCourses);
+            categoryFilter.addEventListener('change', filterCourses);
+            
+            // Clear search on ESC key
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    searchInput.value = '';
+                    filterCourses();
+                }
+            });
         });
-
-        countText.innerText = visible;
-        noResults.style.display = visible === 0 ? 'block' : 'none';
-    }
-
-    searchInput.addEventListener('input', filterInternships);
-    categoryFilter.addEventListener('change', filterInternships);
-});
-</script>
-    
+    </script>
 </body>
 
 </html>
+
 
