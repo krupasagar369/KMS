@@ -312,7 +312,7 @@
         <i class="bi bi-whatsapp"></i>
     </a>
 
-   <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
     /* ===============================
@@ -330,8 +330,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let visible = 0;
 
         cards.forEach(card => {
-            const title = card.querySelector("h4").innerText.toLowerCase();
-            const desc = card.querySelector("p").innerText.toLowerCase();
+            const titleEl = card.querySelector("h4");
+            const descEl = card.querySelector("p");
+
+            const title = titleEl ? titleEl.innerText.toLowerCase() : "";
+            const desc = descEl ? descEl.innerText.toLowerCase() : "";
             const category = card.getAttribute("data-category");
 
             const matchesSearch =
@@ -348,55 +351,50 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        countText.innerText = visible;
-        noResults.style.display = visible === 0 ? "block" : "none";
+        if (countText) countText.innerText = visible;
+        if (noResults) noResults.style.display = visible === 0 ? "block" : "none";
     }
 
-    if (searchInput && categoryFilter) {
-        searchInput.addEventListener("input", filterInternships);
-        categoryFilter.addEventListener("change", filterInternships);
-    }
+    if (searchInput) searchInput.addEventListener("input", filterInternships);
+    if (categoryFilter) categoryFilter.addEventListener("change", filterInternships);
 
 
     /* ===============================
-       FORM SUBMIT → WHATSAPP
+       FORM → WHATSAPP (MOBILE SAFE)
     =============================== */
     const contactForm = document.getElementById("contactForm");
-    const courseInput = document.getElementById("courseInterest");
-    const messageBox = document.getElementById("message");
 
     if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const name = document.getElementById("fullName").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const courseInterest = courseInput ? courseInput.value.trim() : "Not specified";
-            const message = messageBox.value.trim();
+            const name = document.getElementById("fullName")?.value.trim();
+            const email = document.getElementById("email")?.value.trim();
+            const phone = document.getElementById("phone")?.value.trim();
+            const course = document.getElementById("courseInterest")?.value || "Not specified";
+            const message = document.getElementById("message")?.value.trim();
 
             if (!name || !email || !phone || !message) {
-                alert("Please fill all required fields.");
+                alert("Please fill all required fields");
                 return;
             }
 
-            const whatsappMessage =
-                `*New Course Enquiry*\n\n` +
-                `*Name:* ${name}\n` +
-                `*Email:* ${email}\n` +
-                `*Phone:* ${phone}\n` +
-                `*Course:* ${courseInterest}\n\n` +
-                `*Message:*\n${message}`;
+            const text =
+                `New Course Enquiry\n\n` +
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Phone: ${phone}\n` +
+                `Course: ${course}\n\n` +
+                `Message:\n${message}`;
 
-            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const encodedText = encodeURIComponent(text);
 
-            const whatsappURL =
-                `https://api.whatsapp.com/send?phone=917358497022&text=${encodedMessage}`;
+            // ✅ MOST RELIABLE WHATSAPP LINK (WORKS EVERYWHERE)
+            const whatsappURL = `https://wa.me/917358497022?text=${encodedText}`;
 
-            // Direct redirect (NO popup)
-            window.open(whatsappURL, "_blank");
+            // ✅ MOBILE & DESKTOP SAFE REDIRECT
+            window.location.href = whatsappURL;
 
-            // Optional: reset form after redirect
             contactForm.reset();
         });
     }
@@ -408,6 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
