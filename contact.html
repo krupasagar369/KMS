@@ -181,7 +181,9 @@
                                 <textarea class="form-control" id="message" rows="4" placeholder="Tell us more about your interests..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">
-                                <i class="bi bi-whatsapp me-2"></i> Send via WhatsApp
+                              <a href="#" id="whatsappBtn" class="btn btn-primary w-100">
+    <i class="bi bi-whatsapp me-2"></i> Send via WhatsApp
+</a>
                             </button>
                         </form>
                     </div>
@@ -311,7 +313,34 @@
     <a href="https://api.whatsapp.com/send?phone=917358497022" class="whatsapp-float" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
+<!-- Replace the submit button with this -->
+<a href="#" id="whatsappBtn" class="btn btn-primary w-100">
+    <i class="bi bi-whatsapp me-2"></i> Send via WhatsApp
+</a>
 
+<script>
+document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const courseInterest = document.getElementById("interestedCourse").value.trim() || "Not specified";
+    const message = document.getElementById("message").value.trim();
+    
+    if (!name || !email || !phone || !message) {
+        alert("Please fill all required fields.");
+        return;
+    }
+    
+    const whatsappMessage = `*New Course Enquiry*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Course:* ${courseInterest}\n\n*Message:*\n${message}`;
+    
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const url = `https://wa.me/917358497022?text=${encodedMessage}`;
+    
+    window.open(url, '_blank');
+});
+</script>
     <!-- ✅ FIXED WHATSAPP FORM SCRIPT -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -381,3 +410,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
