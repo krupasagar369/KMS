@@ -314,84 +314,84 @@
     </a>
 
 <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const courseInput = document.getElementById("interestedCourse");
-            const messageBox = document.getElementById("message");
-            const contactForm = document.getElementById("contactForm");
-
-            // Read URL parameters
-            const params = new URLSearchParams(window.location.search);
-            const course = params.get("course");
-
-            /* ===============================
-               AUTO-FILL COURSE
-            =============================== */
-            if (course && courseInput) {
+       document.addEventListener("DOMContentLoaded", function () {
+    const courseInput = document.getElementById("interestedCourse");
+    const messageBox = document.getElementById("message");
+    const contactForm = document.getElementById("contactForm");
+    
+    // Read URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const course = params.get("course");
+    
+    /* AUTO-FILL COURSE */
+    if (course && courseInput) {
+        courseInput.value = decodeURIComponent(course);
+    }
+    
+    /* AUTO-FILL MESSAGE */
+    if (course && messageBox && !messageBox.value) {
+        messageBox.value = `Hi,\n\nI am interested in joining the ${decodeURIComponent(course)} course.\n\nPlease contact me with further details.\n\nThank you.`;
+    }
+    
+    /* FORM SUBMIT → WHATSAPP */
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const courseInterest = courseInput.value.trim() || "Not specified";
+        const message = messageBox.value.trim();
+        
+        // Validate
+        if (!name || !email || !phone || !message) {
+            alert("Please fill all required fields.");
+            return;
+        }
+        
+        // Build WhatsApp message
+        const whatsappMessage = `*New Course Enquiry*\n\n` +
+            `*Name:* ${name}\n` +
+            `*Email:* ${email}\n` +
+            `*Phone:* ${phone}\n` +
+            `*Course:* ${courseInterest}\n\n` +
+            `*Message:*\n${message}`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // ✅ FIXED: Use api.whatsapp.com for better compatibility
+        const phoneNumber = "917358497022"; // Remove + and spaces
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+        
+        // ✅ FIXED: Try window.open first, fallback to location.href
+        const whatsappWindow = window.open(whatsappURL, '_blank');
+        
+        // If popup blocked, use direct navigation
+        if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed === 'undefined') {
+            window.location.href = whatsappURL;
+        }
+        
+        // Show success message
+        alert("Redirecting to WhatsApp...");
+        
+        // Reset form after 2 seconds
+        setTimeout(() => {
+            contactForm.reset();
+            if (course) {
                 courseInput.value = decodeURIComponent(course);
             }
-
-            /* ===============================
-               AUTO-FILL MESSAGE (if course selected)
-            =============================== */
-            if (course && messageBox && !messageBox.value) {
-                messageBox.value = `Hi,\n\nI am interested in joining the ${decodeURIComponent(course)} course.\n\nPlease contact me with further details.\n\nThank you.`;
-            }
-
-            /* ===============================
-               FORM SUBMIT → WHATSAPP
-            =============================== */
-            contactForm.addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                // Get form values
-                const name = document.getElementById("fullName").value.trim();
-                const email = document.getElementById("email").value.trim();
-                const phone = document.getElementById("phone").value.trim();
-                const courseInterest = courseInput.value.trim() || "Not specified";
-                const message = messageBox.value.trim();
-
-                // Validate
-                if (!name || !email || !phone || !message) {
-                    alert("Please fill all required fields.");
-                    return;
-                }
-
-                // Build WhatsApp message
-                const whatsappMessage = `*New Course Enquiry*\n\n` +
-                    `*Name:* ${name}\n` +
-                    `*Email:* ${email}\n` +
-                    `*Phone:* ${phone}\n` +
-                    `*Course:* ${courseInterest}\n\n` +
-                    `*Message:*\n${message}`;
-
-                // Encode message for URL
-                const encodedMessage = encodeURIComponent(whatsappMessage);
-
-                // WhatsApp URL (with country code - India +91)
-                const whatsappURL = `https://wa.me/917358497022?text=${encodedMessage}`;
-
-                // Open WhatsApp
-                window.open(whatsappURL, '_blank');
-
-                // Show success message
-                alert("Redirecting to WhatsApp...");
-
-                // Optional: Reset form after 2 seconds
-                setTimeout(() => {
-                    contactForm.reset();
-                    // Re-fill course if it was auto-filled
-                    if (course) {
-                        courseInput.value = decodeURIComponent(course);
-                    }
-                }, 2000);
-            });
-        });
+        }, 2000);
+    });
+});
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
