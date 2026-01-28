@@ -312,7 +312,7 @@ html {
 /* Page Header */
 .page-header {
     padding: 150px 0 60px;
-    background: linear-gradient(135deg, #F9FAFB 0%, #EFF6FF 100%);
+    background-color: #0F172A;
 }
 /* ============================================
    ABOUT US SECTION - Matching Hero Design
@@ -1904,3 +1904,4 @@ html {
     color: var(--text-muted);
     font-size: 18px;
 }
+
