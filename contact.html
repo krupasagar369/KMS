@@ -315,9 +315,9 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ===============================
+    /* =====================================
        INTERNSHIP SEARCH & FILTER
-    =============================== */
+    ===================================== */
     const searchInput = document.getElementById("internshipSearch");
     const categoryFilter = document.getElementById("internshipCategory");
     const cards = document.querySelectorAll(".internship-card");
@@ -325,23 +325,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const noResults = document.getElementById("internshipNoResults");
 
     function filterInternships() {
+        if (!searchInput || !categoryFilter) return;
+
         const searchValue = searchInput.value.toLowerCase().trim();
         const categoryValue = categoryFilter.value;
         let visible = 0;
 
         cards.forEach(card => {
-            const titleEl = card.querySelector("h4");
-            const descEl = card.querySelector("p");
-
-            const title = titleEl ? titleEl.innerText.toLowerCase() : "";
-            const desc = descEl ? descEl.innerText.toLowerCase() : "";
+            const title = card.querySelector("h4")?.innerText.toLowerCase() || "";
+            const desc = card.querySelector("p")?.innerText.toLowerCase() || "";
             const category = card.getAttribute("data-category");
 
-            const matchesSearch =
-                title.includes(searchValue) || desc.includes(searchValue);
-
-            const matchesCategory =
-                categoryValue === "all" || category === categoryValue;
+            const matchesSearch = title.includes(searchValue) || desc.includes(searchValue);
+            const matchesCategory = categoryValue === "all" || category === categoryValue;
 
             if (matchesSearch && matchesCategory) {
                 card.style.display = "";
@@ -359,9 +355,21 @@ document.addEventListener("DOMContentLoaded", function () {
     if (categoryFilter) categoryFilter.addEventListener("change", filterInternships);
 
 
-    /* ===============================
-       FORM → WHATSAPP (MOBILE SAFE)
-    =============================== */
+    /* =====================================
+       AUTO-FILL COURSE FROM URL
+    ===================================== */
+    const params = new URLSearchParams(window.location.search);
+    const selectedCourse = params.get("course");
+    const courseField = document.getElementById("courseInterest");
+
+    if (selectedCourse && courseField) {
+        courseField.value = decodeURIComponent(selectedCourse);
+    }
+
+
+    /* =====================================
+       CONTACT FORM → WHATSAPP (ALL DEVICES)
+    ===================================== */
     const contactForm = document.getElementById("contactForm");
 
     if (contactForm) {
@@ -371,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const name = document.getElementById("fullName")?.value.trim();
             const email = document.getElementById("email")?.value.trim();
             const phone = document.getElementById("phone")?.value.trim();
-            const course = document.getElementById("courseInterest")?.value || "Not specified";
+            const course = courseField?.value || "Not specified";
             const message = document.getElementById("message")?.value.trim();
 
             if (!name || !email || !phone || !message) {
@@ -379,22 +387,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            const text =
-                `New Course Enquiry\n\n` +
+            const whatsappMessage =
+                `New Internship Enquiry\n\n` +
                 `Name: ${name}\n` +
                 `Email: ${email}\n` +
                 `Phone: ${phone}\n` +
                 `Course: ${course}\n\n` +
                 `Message:\n${message}`;
 
-            const encodedText = encodeURIComponent(text);
+            const whatsappURL =
+                `https://wa.me/917358497022?text=${encodeURIComponent(whatsappMessage)}`;
 
-            // ✅ MOST RELIABLE WHATSAPP LINK (WORKS EVERYWHERE)
-            const whatsappURL = `https://wa.me/917358497022?text=${encodedText}`;
-
-            // ✅ MOBILE & DESKTOP SAFE REDIRECT
             window.location.href = whatsappURL;
-
             contactForm.reset();
         });
     }
@@ -406,6 +410,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
