@@ -66,26 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { day: 9, time: '11 AM - 1 PM' }, { day: 15, time: '6 PM - 8 PM' },
     { day: 24, time: '11 AM - 1 PM' }, { day: 31, time: '6 PM - 8 PM' }
   ]},
-  { id: 8, course: 'Java Full Stack', category: 'development', batches: [
-    { day: 6, time: '11 AM - 1 PM' }, { day: 13, time: '6 PM - 8 PM' },
-    { day: 20, time: '11 AM - 1 PM' }, { day: 27, time: '6 PM - 8 PM' }
-  ]},
-  { id: 9, course: 'Web Development', category: 'development', batches: [
-    { day: 5, time: '11 AM - 1 PM' }, { day: 14, time: '6 PM - 8 PM' },
-    { day: 21, time: '11 AM - 1 PM' }, { day: 28, time: '6 PM - 8 PM' }
-  ]},
-  { id: 10, course: 'React JS', category: 'development', batches: [
-    { day: 4, time: '11 AM - 1 PM' }, { day: 12, time: '6 PM - 8 PM' },
-    { day: 19, time: '11 AM - 1 PM' }, { day: 26, time: '6 PM - 8 PM' }
-  ]},
-  { id: 11, course: 'Angular', category: 'development', batches: [
-    { day: 6, time: '11 AM - 1 PM' }, { day: 15, time: '6 PM - 8 PM' },
-    { day: 22, time: '11 AM - 1 PM' }, { day: 29, time: '6 PM - 8 PM' }
-  ]},
-  { id: 12, course: 'Node JS', category: 'development', batches: [
-    { day: 7, time: '11 AM - 1 PM' }, { day: 16, time: '6 PM - 8 PM' },
-    { day: 23, time: '11 AM - 1 PM' }, { day: 30, time: '6 PM - 8 PM' }
-  ]},
+ 
   { id: 13, course: 'SQL & MySQL', category: 'database', batches: [
     { day: 3, time: '11 AM - 1 PM' }, { day: 11, time: '6 PM - 8 PM' },
     { day: 18, time: '11 AM - 1 PM' }, { day: 25, time: '6 PM - 8 PM' }
@@ -247,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderBatches(batchesData);
 });
+
 
 
 
