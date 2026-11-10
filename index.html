@@ -162,39 +162,102 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            
-            <div class="row align-items-center">
-                 <div class="col-lg-6 fade-in">
-                    <h1 class="display-4 fw-bold mb-4 text-cyan">Transform Your Career with <span class="text-orange">Expert Training</span></h1>
-                    <p class="lead mb-4 text-white">Join KMS Software Solutions and master cutting-edge technologies. From programming to cloud computing, we prepare you for tomorrow's tech challenges.</p>
-                    <div class="d-flex gap-3 mb-4">
-                        <a href="courses.html" class="btn btn-primary btn-lg">
-                            Explore Courses <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                        <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact Us</a>
+  <!-- Hero Section (new design) -->
+    <section class="hero-v2">
+        <span class="hero-v2__blob hero-v2__blob--lg"></span>
+
+        <div class="container position-relative">
+            <div class="row align-items-center g-5">
+
+                <!-- LEFT: content -->
+                <div class="col-lg-6">
+                    <div class="hero-v2__badges">
+                        <span class="hero-v2__pill">NELLORE'S TOP IT TRAINING</span>
+                        <span class="hero-v2__date">New Batches Open <i class="hero-v2__dot"></i></span>
                     </div>
-                    <div class="d-flex gap-5">
-                        <div>
-                            <h3 class="fw-bold text-primary mb-0">628+</h3>
-                            <p class="text-white">Students Trained</p>
+
+                    <h1 class="hero-v2__title">
+                        Level Up Your<br>
+                        <span class="hero-v2__accent">Tech</span> Skills
+                        <span class="hero-v2__spark" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="34" height="34" fill="#fff"><path d="M12 0c.9 6.6 5.4 11.1 12 12-6.6.9-11.1 5.4-12 12-.9-6.6-5.4-11.1-12-12C6.6 11.1 11.1 6.6 12 0z"/></svg>
+                        </span><br>
+                        With Our Training
+                    </h1>
+
+                    <p class="hero-v2__text">
+                        Join hundreds of students at KMS Software Solutions and upgrade your
+                        skills with expert-led classes and real-world projects.
+                    </p>
+
+                    <div class="hero-v2__cta">
+                        <a href="courses.html" class="hero-v2__btn">Explore Courses <i class="bi bi-arrow-right"></i></a>
+
+                        <div class="hero-v2__members">
+                            <div class="hero-v2__avatars">
+                                <span><i class="bi bi-person-fill"></i></span>
+                                <span><i class="bi bi-person-fill"></i></span>
+                                <span><i class="bi bi-person-fill"></i></span>
+                                <span class="hero-v2__count">600+</span>
+                            </div>
+                            <small>Students Trained</small>
                         </div>
-                        <div>
-                            <h3 class="fw-bold text-primary mb-0">95%</h3>
-                            <p class="text-white">Success Rate</p>
+                    </div>
+
+                    <div class="hero-v2__features">
+                        <div class="hero-v2__feature">
+                            <span class="hero-v2__icon"><i class="bi bi-camera-video"></i></span>
+                            <div><strong>Live Classes</strong><small>Interactive Learning</small></div>
+                        </div>
+                        <div class="hero-v2__feature">
+                            <span class="hero-v2__icon hero-v2__icon--yellow"><i class="bi bi-person-badge"></i></span>
+                            <div><strong>Expert Trainers</strong><small>Industry Professionals</small></div>
+                        </div>
+                        <div class="hero-v2__feature">
+                            <span class="hero-v2__icon"><i class="bi bi-kanban"></i></span>
+                            <div><strong>Practical Projects</strong><small>Real World Experience</small></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 fade-in-delay">
-                    <div class="hero-card">
-                        <!-- <img src="https://ik.imagekit.io/iq6dnzo5f/Untitled%20design.png" class="techs" alt=""> -->
-                        <!-- <i class="bi bi-laptop display-1 text-primary mb-3"></i> -->
-                        <!-- <h4 class="fw-bold mb-3">Start Learning Today</h4>
-                        <p>Professional training designed for your success</p> -->
+
+                <!-- RIGHT: image + floating cards -->
+                <div class="col-lg-6">
+                    <div class="hero-v2__visual">
+                        <span class="hero-v2__circle"></span>
+                        <span class="hero-v2__star"></span>
+                        <span class="hero-v2__ring"></span>
+                        <span class="hero-v2__dots"></span>
+
+                        <!-- put your transparent PNG of a student with laptop here -->
+                        <img src="images/hero-student.png" alt="Student learning on laptop" class="hero-v2__photo">
+
+                        <div class="hero-v2__card hero-v2__card--class">
+                            <span class="hero-v2__icon hero-v2__icon--lg"><i class="bi bi-camera-video-fill"></i></span>
+                            <div class="flex-grow-1">
+                                <strong>Live Class</strong>
+                                <small>Power BI Basics</small>
+                                <div class="hero-v2__avatars hero-v2__avatars--sm mt-2">
+                                    <span><i class="bi bi-person-fill"></i></span>
+                                    <span><i class="bi bi-person-fill"></i></span>
+                                    <span class="hero-v2__count">+32</span>
+                                </div>
+                                <div class="hero-v2__bar"><i style="width:40%"></i></div>
+                                <em>Ongoing</em>
+                            </div>
+                        </div>
+
+                        <div class="hero-v2__card hero-v2__card--progress">
+                            <span class="hero-v2__icon hero-v2__icon--yellow hero-v2__icon--lg"><i class="bi bi-graph-up-arrow"></i></span>
+                            <div class="flex-grow-1">
+                                <strong>Beginner to Advanced</strong>
+                                <small>Progress Tracking</small>
+                                <div class="hero-v2__bar"><i style="width:75%"></i></div>
+                                <em class="text-end d-block">75%</em>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
