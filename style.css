@@ -249,7 +249,14 @@ html {
     .hero-v2__card { transform: scale(.85); }
     .hero-v2__feature { width: 100%; }
 }
-
+.hero-v2__photo {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 540px;
+    object-fit: contain;
+    mix-blend-mode: multiply;   /* white background becomes transparent */
+}
 /* Hero Section */
 /* ============================================
    SIMPLE HERO - White/Blue Gradients + Slow Circles
